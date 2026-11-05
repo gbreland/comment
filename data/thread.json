@@ -1,0 +1,469 @@
+{
+  "post": {
+    "id": "post-cybercab",
+    "title": "Tesla Cybercab Deep Dive: Inside the Engineering with Lars Moravy and Team",
+    "source": "r/SelfDrivingCars",
+    "sourceUrl": "https://www.reddit.com/r/SelfDrivingCars/comments/1xg8byb/tesla_cybercab_deep_dive_inside_the_engineering/",
+    "date": "2026-10-27",
+    "author": "u/chassis_notes",
+    "body": "I am not a fan of the Cybercab as an AV platform. The interesting part is the factory. Unboxed modules, brake-by-wire with no hydraulics, a pack you can swap by module. I want that work on the Model 3 and Y. One less fluid system to service.",
+    "summary": "OP doubts the two-seat robotaxi. The factory and service design are the part worth stealing for cars people already own.",
+    "tags": ["manufacturing", "robotaxi", "brake-by-wire"]
+  },
+  "clusters": [
+    {"id": "av", "label": "AV debate"},
+    {"id": "mfg", "label": "Manufacturing"},
+    {"id": "safety", "label": "Safety"},
+    {"id": "cost", "label": "Cost"}
+  ],
+  "topics": [
+    {
+      "id": "t-op",
+      "title": "OP: factory yes, AV platform no",
+      "summary": "Keep the unboxed line and brake-by-wire. Do not treat a two-seat cab as the proof of unsupervised driving.",
+      "description": "The original post splits the video in two. Manufacturing looks transferable. The robotaxi product still has to earn trust on the road.",
+      "author": "u/chassis_notes",
+      "pinned": true,
+      "cluster": "mfg",
+      "heat": 96,
+      "createdAt": "2026-10-27T14:02:00Z",
+      "body": "Watch the Munro walk for the palletized front module and the missing hydraulic brake. That is the lesson. The Cybercab as a robotaxi still has to beat a geo-fenced operator that already takes paid rides."
+    },
+    {
+      "id": "t-waymo",
+      "title": "Waymo is better",
+      "summary": "Paid rides exist today with lidar and a tight ODD. The camera-only worldwide bet is still a research program.",
+      "description": "Starts as a brand fight, then becomes a fight about safety evidence, maps, and whether a constrained area is a product or a cop-out.",
+      "author": "u/lidar_or_bust",
+      "pinned": false,
+      "cluster": "av",
+      "heat": 88,
+      "createdAt": "2026-10-27T14:18:00Z",
+      "body": "Waymo already runs robotaxis in cities with lidar, radar, and a mapped ODD. Cybercab volume on a Texas line does not close that gap. A beautiful factory is not a driving stack."
+    },
+    {
+      "id": "t-notneeded",
+      "title": "Robotaxis are not needed",
+      "summary": "Transit, bikes, and owned EVs already move people. A two-seat cab solves a pitch deck more than a city.",
+      "description": "Cost and land-use people argue the demand case. The thread is smaller, but it keeps tying back to fleet utilization.",
+      "author": "u/muni_fan",
+      "pinned": false,
+      "cluster": "cost",
+      "heat": 31,
+      "createdAt": "2026-10-27T14:41:00Z",
+      "body": "Most trips in a city are not 'two strangers, no steering wheel, $4 a mile.' We already have buses, rail, and cars that park. A purpose-built cab is a solution looking for a utilization story."
+    },
+    {
+      "id": "t-marvel",
+      "title": "Marvel of engineering",
+      "summary": "78% automation, 25 final stations, first brake-by-wire Tesla. The design exists to make the robots win.",
+      "description": "Praise for the line, then a turn into whether unboxed ideas leak into Model Y without a paint shop delete.",
+      "author": "u/line_nerd",
+      "pinned": false,
+      "cluster": "mfg",
+      "heat": 74,
+      "createdAt": "2026-10-27T15:05:00Z",
+      "body": "They redesigned the car so automation could work. Front module on a pallet, body dropped on top, wheels almost last. That is a different company than the one that fought too much Model 3 automation in 2018."
+    },
+    {
+      "id": "t-brake",
+      "title": "Brake-by-wire for 3/Y",
+      "summary": "No hydraulics is a service win if the fail-operational story holds. OP wants this on cars that already sell.",
+      "description": "Maintenance people love it. Safety people want dual compute paths and a clear degraded mode before it hits a family car.",
+      "author": "u/brake_wire",
+      "pinned": false,
+      "cluster": "safety",
+      "heat": 67,
+      "createdAt": "2026-10-27T15:22:00Z",
+      "body": "Hydraulic fluid is a leak, a flush, and a caliper job. Delete it on a high-volume car and you cut shop time. Only if the by-wire path is redundant enough for a parent in snow, not only a geo-fenced cab."
+    },
+    {
+      "id": "t-unboxed",
+      "title": "Unboxed manufacturing",
+      "summary": "Front, rear, side, center built and tested apart. Half the floor space, short final line. Design was the bottleneck, not robots.",
+      "description": "Process geeks trade notes on module test, paint-shop delete, and whether suppliers can feed a 10-second dream.",
+      "author": "u/line_nerd",
+      "pinned": false,
+      "cluster": "mfg",
+      "heat": 71,
+      "createdAt": "2026-10-27T15:40:00Z",
+      "body": "Moravy's line: past automation failed because the car was not designed for it. Unboxed splits the vehicle so each chunk can be built and checked before marriage. That is the real deep dive, not the two-seat styling."
+    },
+    {
+      "id": "t-outrun",
+      "title": "Line outruns deployment",
+      "summary": "The plant can build faster than Tesla can put cabs into service. Hardware is no longer the bottleneck they sell.",
+      "description": "Turns from a flex about cycle time into a cost argument: idle cabs, software, and city permits.",
+      "author": "u/fleet_ops",
+      "pinned": false,
+      "cluster": "cost",
+      "heat": 58,
+      "createdAt": "2026-10-27T16:01:00Z",
+      "body": "They do not run the line every day because it outpaces deployments. That is not a small aside. It means the scarce thing is permission, software, and ops, not stampings."
+    },
+    {
+      "id": "t-camera",
+      "title": "Camera-only is the actual bet",
+      "summary": "Cybercab is a body for a vision stack. If cameras are not enough, the factory excellence does not save the product.",
+      "description": "Quiet thread that became the safety spine. Links into Waymo, brake-by-wire, and whether occupancy sensors replace a driver.",
+      "author": "u/camera_max",
+      "pinned": false,
+      "cluster": "safety",
+      "heat": 79,
+      "createdAt": "2026-10-27T16:20:00Z",
+      "body": "Strip the paint and the pallet jokes. The vehicle is a camera computer with seats. Either vision generalizes, or you built a very pretty geo-fenced dead end."
+    }
+  ],
+  "comments": [
+    {
+      "id": "c-op-1",
+      "topicId": "t-op",
+      "parentId": null,
+      "author": "u/range_math",
+      "body": "Agree on the split. I can use brake-by-wire on a car I own next year. I cannot use a two-seat cab that only exists in Austin slides.",
+      "createdAt": "2026-10-27T14:11:00Z",
+      "score": 41,
+      "related": [
+        {"id": "c-br-1", "kind": "comment", "reason": "Same wish: put by-wire on 3/Y"},
+        {"id": "t-brake", "kind": "topic", "reason": "Service case for deleting hydraulics"}
+      ]
+    },
+    {
+      "id": "c-op-2",
+      "topicId": "t-op",
+      "parentId": null,
+      "author": "u/lidar_or_bust",
+      "body": "This is why the Waymo comparison will not die. One team is collecting fares. The other is collecting factory B-roll.",
+      "createdAt": "2026-10-27T14:24:00Z",
+      "score": 36,
+      "related": [
+        {"id": "c-w-1", "kind": "comment", "reason": "Opens the Waymo-is-better claim"},
+        {"id": "t-waymo", "kind": "topic", "reason": "AV product vs factory story"}
+      ]
+    },
+    {
+      "id": "c-op-2a",
+      "topicId": "t-op",
+      "parentId": "c-op-2",
+      "author": "u/chassis_notes",
+      "body": "I am not saying Waymo wins forever. I am saying the video did not present a driving proof. It presented a plant.",
+      "createdAt": "2026-10-27T14:31:00Z",
+      "score": 22,
+      "related": [
+        {"id": "t-unboxed", "kind": "topic", "reason": "The plant is the actual content"}
+      ]
+    },
+    {
+      "id": "c-op-3",
+      "topicId": "t-op",
+      "parentId": null,
+      "author": "u/line_nerd",
+      "body": "If they keep hydraulic brakes on 3/Y after this, it is a choice, not a physics limit. The cab is the test mule for the rest of the lineup.",
+      "createdAt": "2026-10-27T15:28:00Z",
+      "score": 18,
+      "related": [
+        {"id": "t-brake", "kind": "topic", "reason": "Transfer path onto volume cars"}
+      ]
+    },
+    {
+      "id": "c-w-1",
+      "topicId": "t-waymo",
+      "parentId": null,
+      "author": "u/lidar_or_bust",
+      "body": "Paid rider, mapped city, lidar plus radar. That is a product. Cybercab is still 'trust the cameras at scale.' Those are not the same sentence.",
+      "createdAt": "2026-10-27T14:19:00Z",
+      "score": 54,
+      "related": [
+        {"id": "t-camera", "kind": "topic", "reason": "Vision stack is the real bet"}
+      ]
+    },
+    {
+      "id": "c-w-1a",
+      "topicId": "t-waymo",
+      "parentId": "c-w-1",
+      "author": "u/camera_max",
+      "body": "A mapped ODD is a product and a ceiling. Tesla is betting that cameras plus a huge fleet beat a HD map you have to redraw every block.",
+      "createdAt": "2026-10-27T14:33:00Z",
+      "score": 29,
+      "related": []
+    },
+    {
+      "id": "c-w-1a1",
+      "topicId": "t-waymo",
+      "parentId": "c-w-1a",
+      "author": "u/lidar_or_bust",
+      "body": "Scale only matters if the safety case holds. 'We drive more miles' is not the same as 'we drive the hard miles.'",
+      "createdAt": "2026-10-27T14:47:00Z",
+      "score": 33,
+      "related": [
+        {"id": "t-camera", "kind": "topic", "reason": "Safety case, not volume"}
+      ]
+    },
+    {
+      "id": "c-w-1a1a",
+      "topicId": "t-waymo",
+      "parentId": "c-w-1a1",
+      "author": "u/range_math",
+      "body": "NHTSA letters still do not settle camera vs lidar. They settle 'this fleet had this crash type.' You cannot read a winner from that yet.",
+      "createdAt": "2026-10-27T15:02:00Z",
+      "score": 21,
+      "related": []
+    },
+    {
+      "id": "c-w-1a1a1",
+      "topicId": "t-waymo",
+      "parentId": "c-w-1a1a",
+      "author": "u/lidar_or_bust",
+      "body": "Until the data is public and comparable, Waymo's tight ODD is the honest product. It tells you where the system is allowed to fail by not going.",
+      "createdAt": "2026-10-27T15:16:00Z",
+      "score": 27,
+      "related": []
+    },
+    {
+      "id": "c-w-1a1a1a",
+      "topicId": "t-waymo",
+      "parentId": "c-w-1a1a1",
+      "author": "u/fleet_ops",
+      "body": "And that honesty is why they can charge a fare. A cab you will not dispatch in rain is still a cab people ride. A cab you might dispatch anywhere is a press tour.",
+      "createdAt": "2026-10-27T15:29:00Z",
+      "score": 19,
+      "related": [
+        {"id": "t-outrun", "kind": "topic", "reason": "Deployment, not the line, gates revenue"}
+      ]
+    },
+    {
+      "id": "c-w-2",
+      "topicId": "t-waymo",
+      "parentId": null,
+      "author": "u/muni_fan",
+      "body": "Even if Tesla catches Waymo, I still want to know why the city needs another empty vehicle circling for a fare. That fight lives next door.",
+      "createdAt": "2026-10-27T14:55:00Z",
+      "score": 14,
+      "related": [
+        {"id": "t-notneeded", "kind": "topic", "reason": "Demand case, not stack case"}
+      ]
+    },
+    {
+      "id": "c-w-3",
+      "topicId": "t-waymo",
+      "parentId": null,
+      "author": "u/line_nerd",
+      "body": "The factory tour does not refute Waymo. It also does not need to. Different thesis: make the car cheap enough that a mediocre stack still has unit economics.",
+      "createdAt": "2026-10-27T16:12:00Z",
+      "score": 17,
+      "related": [
+        {"id": "t-marvel", "kind": "topic", "reason": "Cost-down as the AV strategy"}
+      ]
+    },
+    {
+      "id": "c-nn-1",
+      "topicId": "t-notneeded",
+      "parentId": null,
+      "author": "u/range_math",
+      "body": "A two-seat cab with no trunk is a downtown lunch vehicle. That is a niche. Fine as a niche. Not fine as 'the future of all transport.'",
+      "createdAt": "2026-10-27T14:50:00Z",
+      "score": 16,
+      "related": []
+    },
+    {
+      "id": "c-nn-1a",
+      "topicId": "t-notneeded",
+      "parentId": "c-nn-1",
+      "author": "u/fleet_ops",
+      "body": "Utilization saves the niche. If it runs 16 hours, the seat count hurts less. If it sits because software will not release the area, you built a statue.",
+      "createdAt": "2026-10-27T16:08:00Z",
+      "score": 12,
+      "related": [
+        {"id": "t-outrun", "kind": "topic", "reason": "Idle hardware from slow deployment"}
+      ]
+    },
+    {
+      "id": "c-nn-2",
+      "topicId": "t-notneeded",
+      "parentId": null,
+      "author": "u/chassis_notes",
+      "body": "This is close to my view of the platform. I still want the plant tricks on cars that are needed.",
+      "createdAt": "2026-10-27T15:44:00Z",
+      "score": 9,
+      "related": [
+        {"id": "t-op", "kind": "topic", "reason": "OP's original split"}
+      ]
+    },
+    {
+      "id": "c-mv-1",
+      "topicId": "t-marvel",
+      "parentId": null,
+      "author": "u/brake_wire",
+      "body": "25 automated final stations vs a Model Y forest of them. That number is the whole video if you care about cost per car, not Twitter clips of the wheel robot.",
+      "createdAt": "2026-10-27T15:11:00Z",
+      "score": 28,
+      "related": [
+        {"id": "t-unboxed", "kind": "topic", "reason": "Same line architecture"}
+      ]
+    },
+    {
+      "id": "c-mv-2",
+      "topicId": "t-marvel",
+      "parentId": null,
+      "author": "u/camera_max",
+      "body": "I like the plant. I do not want the plant to launder the autonomy claim. Pretty robots can still ship a weak driver.",
+      "createdAt": "2026-10-27T16:33:00Z",
+      "score": 24,
+      "related": [
+        {"id": "t-camera", "kind": "topic", "reason": "Do not confuse line with stack"},
+        {"id": "c-w-1", "kind": "comment", "reason": "Product vs B-roll"}
+      ]
+    },
+    {
+      "id": "c-mv-2a",
+      "topicId": "t-marvel",
+      "parentId": "c-mv-2",
+      "author": "u/line_nerd",
+      "body": "Fair. Call it a manufacturing marvel and stop. The AV argument has its own rooms.",
+      "createdAt": "2026-10-27T16:41:00Z",
+      "score": 11,
+      "related": [
+        {"id": "t-waymo", "kind": "topic", "reason": "Keep AV in the AV topic"}
+      ]
+    },
+    {
+      "id": "c-br-1",
+      "topicId": "t-brake",
+      "parentId": null,
+      "author": "u/chassis_notes",
+      "body": "This is the transfer I asked for. If 3/Y keep master cylinders after Cybercab ships dry, Tesla left money and shop time on the table.",
+      "createdAt": "2026-10-27T15:24:00Z",
+      "score": 32,
+      "related": [
+        {"id": "c-op-1", "kind": "comment", "reason": "OP thread wants the same transfer"}
+      ]
+    },
+    {
+      "id": "c-br-2",
+      "topicId": "t-brake",
+      "parentId": null,
+      "author": "u/lidar_or_bust",
+      "body": "Fail-operational needs two compute paths and a degraded brake you can explain to a jury. A cab in a mapped city is an easier case than a Model Y on ice.",
+      "createdAt": "2026-10-27T15:38:00Z",
+      "score": 26,
+      "related": [
+        {"id": "t-camera", "kind": "topic", "reason": "Redundancy is the safety story"}
+      ]
+    },
+    {
+      "id": "c-br-2a",
+      "topicId": "t-brake",
+      "parentId": "c-br-2",
+      "author": "u/brake_wire",
+      "body": "True. The cab can be the durability mule. Do not skip the winter validation just because the line is ready.",
+      "createdAt": "2026-10-27T15:51:00Z",
+      "score": 14,
+      "related": []
+    },
+    {
+      "id": "c-ub-1",
+      "topicId": "t-unboxed",
+      "parentId": null,
+      "author": "u/range_math",
+      "body": "Half the floor space is a real number. Paint-shop delete is a bigger one. That only works if the panels never need a respray in the field.",
+      "createdAt": "2026-10-27T15:48:00Z",
+      "score": 20,
+      "related": []
+    },
+    {
+      "id": "c-ub-2",
+      "topicId": "t-unboxed",
+      "parentId": null,
+      "author": "u/line_nerd",
+      "body": "Module-level test before marriage is how you get 78% automation without boxing yourself. You do not debug a full car at station 19.",
+      "createdAt": "2026-10-27T16:00:00Z",
+      "score": 23,
+      "related": [
+        {"id": "t-marvel", "kind": "topic", "reason": "Automation percentage comes from this split"}
+      ]
+    },
+    {
+      "id": "c-ub-2a",
+      "topicId": "t-unboxed",
+      "parentId": "c-ub-2",
+      "author": "u/fleet_ops",
+      "body": "Swap-a-module battery is the same idea in service. Build and repair in chunks. That is why the plant talk belongs next to the pack talk.",
+      "createdAt": "2026-10-27T16:15:00Z",
+      "score": 15,
+      "related": [
+        {"id": "t-op", "kind": "topic", "reason": "OP called out module swap"}
+      ]
+    },
+    {
+      "id": "c-or-1",
+      "topicId": "t-outrun",
+      "parentId": null,
+      "author": "u/muni_fan",
+      "body": "If the line waits on deployments, the scarce resource is city access. Building faster does not mint permits.",
+      "createdAt": "2026-10-27T16:07:00Z",
+      "score": 25,
+      "related": [
+        {"id": "t-notneeded", "kind": "topic", "reason": "Demand and permission, not stampings"}
+      ]
+    },
+    {
+      "id": "c-or-2",
+      "topicId": "t-outrun",
+      "parentId": null,
+      "author": "u/camera_max",
+      "body": "Idle cabs are a software confession. Hardware is ahead of the stack they need to release unsupervised miles.",
+      "createdAt": "2026-10-27T16:28:00Z",
+      "score": 30,
+      "related": [
+        {"id": "t-camera", "kind": "topic", "reason": "Vision release gates the fleet"},
+        {"id": "c-w-1a1a1a", "kind": "comment", "reason": "Fares need a dispatchable ODD"}
+      ]
+    },
+    {
+      "id": "c-or-2a",
+      "topicId": "t-outrun",
+      "parentId": "c-or-2",
+      "author": "u/fleet_ops",
+      "body": "Also a cost confession. Capex for a line you dare not run every day is expensive humility.",
+      "createdAt": "2026-10-27T16:36:00Z",
+      "score": 13,
+      "related": []
+    },
+    {
+      "id": "c-cam-1",
+      "topicId": "t-camera",
+      "parentId": null,
+      "author": "u/lidar_or_bust",
+      "body": "If vision is enough, Cybercab is a cheap body for a general driver. If not, you spent a factory on a local demo.",
+      "createdAt": "2026-10-27T16:22:00Z",
+      "score": 34,
+      "related": [
+        {"id": "t-waymo", "kind": "topic", "reason": "Lidar product as the control"}
+      ]
+    },
+    {
+      "id": "c-cam-2",
+      "topicId": "t-camera",
+      "parentId": null,
+      "author": "u/brake_wire",
+      "body": "By-wire and no driver in the seat means the computer owns the stop. That couples this topic to the brake topic whether we like it or not.",
+      "createdAt": "2026-10-27T16:45:00Z",
+      "score": 18,
+      "related": [
+        {"id": "t-brake", "kind": "topic", "reason": "Stopping is part of the AV safety case"}
+      ]
+    },
+    {
+      "id": "c-cam-2a",
+      "topicId": "t-camera",
+      "parentId": "c-cam-2",
+      "author": "u/chassis_notes",
+      "body": "Yes. I still want the brake hardware on 3/Y with a human in the loop. That is a smaller claim and a faster win.",
+      "createdAt": "2026-10-27T16:52:00Z",
+      "score": 15,
+      "related": [
+        {"id": "t-op", "kind": "topic", "reason": "OP's transferable-hardware claim"}
+      ]
+    }
+  ]
+}
